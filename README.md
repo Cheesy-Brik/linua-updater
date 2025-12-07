@@ -13,7 +13,7 @@ A lightweight and efficient updater for The Sims 4 DLC content.
 ## System Requirements
 - Windows 10 or later
 - The Sims 4 installed
-- 10GB free disk space (for large DLC installations)
+- 80GB free disk space (for large DLC installations)
 - Internet connection
 
 ## How to Use
