@@ -240,10 +240,13 @@ The Sims 4
 * SP66 — Golden Years Kit
 * SP67 — Kitchen Clutter Kit
 * SP69 — Autumn Apparel Kit
+* SP68 — Spongebob's House Kit
+* SP70 — Spongebob Kid's Room Kit
 * SP71 — Grange Mudroom Kit
 * SP72 — Essential Glam Kit
 * SP73 — Modern Retreat Kit
 * SP74 — Garden to Table Kit
+* SP81 — Prairie Dreams Kit
 
 ---
 
