@@ -1528,7 +1528,7 @@ class DLCSelector(QDialog):
 
         self.check_all = QCheckBox("Select all")
         self.check_all.setStyleSheet("color: white; font-weight: bold; padding: 10px;")
-        self.check_all.stateChanged.connect(self.toggle_all)
+        self.check_all.checkStateChanged.connect(self.toggle_all)
         layout.addWidget(self.check_all)
 
         scroll = QScrollArea()
