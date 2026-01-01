@@ -15,6 +15,7 @@ import requests
 import socket
 import webbrowser
 import traceback
+import platform
 from pathlib import Path
 from datetime import datetime
 
@@ -1990,7 +1991,7 @@ class LinuaUI(QMainWindow):
         if not selected:
             self.logger.log("No DLC selected for installation.")
             return
-            
+
         try:
             # Проверяем наличие 7-zip для многодольных DLC
             multipart_dlc = []
@@ -2271,6 +2272,31 @@ class LinuaUI(QMainWindow):
 #                         ENTRY POINT
 # ================================================================
 if __name__ == "__main__":
+
+    # Windows Admin Check
+    if platform.system() == "Windows":
+        import ctypes
+        
+        # Helper function
+        def is_admin():
+            try:
+                return ctypes.windll.shell32.IsUserAnAdmin()
+            except:
+                return False
+        
+        if not is_admin():
+            # Rerun script asking for admin priveleges
+            ctypes.windll.shell32.ShellExecuteW(
+                None,
+                "runas",
+                sys.executable,
+                " ".join(sys.argv),
+                None,
+                1
+            )
+            # Exit original non-admin process
+            sys.exit()
+
     # Включить поддержку High DPI
     if hasattr(Qt, 'AA_EnableHighDpiScaling'):
         QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
